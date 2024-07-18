@@ -1,43 +1,61 @@
-# Next.js on Netlify Platform Starter
-
-[Live Demo](https://nextjs-platform-starter.netlify.app/)
-
-A modern starter based on Next.js 14 (App Router), Tailwind, daisyUI, and [Netlify Core Primitives](https://docs.netlify.com/core/overview/#develop) (Edge Functions, Image CDN, Blob Store).
-
-In this site, Netlify Core Primitives are used both implictly for running Next.js features (e.g. Route Handlers, image optimization via `next/image`, and more) and also explicitly by the user code. 
-
-Implicit usage means you're using any Next.js functionality and everything "just works" when deployed - all the plumbing is done for you. Explicit usage is framework-agnostic and typically provides more features than what Next.js exposes.
-
-## Deploying to Netlify
-
-This site requires [Netlify Next Runtime v5](https://docs.netlify.com/frameworks/next-js/overview/) for full functionality. That version is now being gradually rolled out to all Netlify accounts. 
-
-After deploying via the button below, please visit the **Site Overview** page for your new site to check whether it is already using the v5 runtime. If not, you'll be prompted to opt-in to to v5.
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/next-platform-starter)
-
-## Developing Locally
-
-1. Clone this repository, then run `npm install` in its root directory.
-
-2. For the starter to have full functionality locally (e.g. edge functions, blob store), please ensure you have an up-to-date version of Netlify CLI. Run:
-
-```
-npm install netlify-cli@latest -g
-```
-
-3. Link your local repository to the deployed Netlify site. This will ensure you're using the same runtime version for both local development and your deployed site.
-
-```
-netlify link
-```
-
-4. Then, run the Next.js development server via Netlify CLI:
-
-```
-netlify dev
-```
-
-If your browser doesn't navigate to the site automatically, visit [localhost:8888](http://localhost:8888).
+![Netlify examples](https://github.com/netlify/edge-functions-examples/assets/7912948/d34a626d-1c65-492d-bb14-85f50d9b72cb)
 
 
+# [Netlify Edge Functions](https://www.netlify.com/products/?utm_campaign=devex&utm_source=edge-functions-examples&utm_medium=github&utm_content=Edge%20Functions%20Product%20Page#netlify-edge-functions) Examples
+
+Explore these examples here: https://edge-functions-examples.netlify.app/
+
+## Responses
+
+- [Hello, world](pages/hello)
+- [Return JSON](pages/json)
+- [Return an image](pages/image)
+
+## Rewrites and proxies
+
+- [Rewrite responses from another URL](pages/rewrite)
+- [Proxy requests to another source](pages/proxy-requests)
+
+## HTTP Headers
+
+- [Set custom HTTP request headers](pages/set-request-header)
+- [Set custom HTTP response headers](pages/set-response-header)
+
+## Transforming responses
+
+- [HTML transformation](pages/htmlrewriter)
+- [Text transformation](pages/transform)
+- [Content includes](pages/include)
+
+## Geolocation
+
+- [Determine a user's location](pages/geolocation)
+- [Block content according to country](pages/country-block)
+- [Serve localized content](pages/localized-content)
+
+## Cookies
+
+- [Set cookies](pages/cookies-set)
+- [Read cookies](pages/cookies-read)
+- [Delete cookies](pages/cookies-delete)
+- [Set up an A/B test using cookies](pages/abtest)
+
+## Streams
+- [Long-running edge functions](pages/long-running)
+- [Server-sent events](pages/server-sent-events)
+
+## WebAssembly
+- [Edge WebAssembly](pages/wasm)
+
+## Environment and debugging
+
+- [Write to the logs](pages/log)
+- [Use environment variables](pages/environment)
+
+---
+
+## Deploy this site to Netlify
+
+Click this button to deploy this site automatically to your Netlify account.
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify/examples/&create_from_path=examples/edge-functions/&utm_campaign=dx-examples&utm_source=edge-functions-examples&utm_medium=web&utm_content=Deploy%20Edge%20Functions%20Examples%20to%20Netlify)
