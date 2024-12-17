@@ -1,9 +1,10 @@
-import type { Context, Config } from "@netlify/edge-functions";
+import type { Config, Context } from "@netlify/edge-functions";
 
 export default async (request: Request, context: Context) => {
-  console.log("Hello from the logging service");
+  console.log("Hello from the logging service. Here's window:");
+  console.log(window);
 
-  return new Response("The request to this URL was logged", {
+  return new Response("The request to this URL was logged. Bert modified it.", {
     headers: { "content-type": "text/html" },
   });
 };
